@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: config-service
+
+server:
+   port : 5000
+
+
+
