@@ -1,2 +1,5 @@
-package com.freelance.account.entities;public class AppUser {
+package com.freelance.account.entities;
+
+public class AppUser {
+
 }

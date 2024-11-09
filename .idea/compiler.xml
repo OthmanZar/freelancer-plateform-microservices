@@ -6,12 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="skills" />
         <module name="config-service" />
         <module name="category-service" />
-        <module name="account-service" />
-        <module name="discovery-service" />
         <module name="gateway-service" />
         <module name="skills-microservice" />
+        <module name="discovery" />
+        <module name="account-service" />
+        <module name="category" />
+        <module name="config" />
+        <module name="discovery-service" />
+        <module name="account" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -25,11 +31,17 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="account" options="-parameters" />
       <module name="account-service" options="-parameters" />
+      <module name="category" options="-parameters" />
       <module name="category-service" options="-parameters" />
+      <module name="config" options="-parameters" />
       <module name="config-service" options="-parameters" />
+      <module name="discovery" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
+      <module name="gateway" options="-parameters" />
       <module name="gateway-service" options="-parameters" />
+      <module name="skills" options="-parameters" />
       <module name="skills-microservice" options="-parameters" />
     </option>
   </component>
