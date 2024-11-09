@@ -1,10 +1,8 @@
 package com.freelance.category.mappers;
 
-import com.freelance.category.dtos.CategoryRequest;
 import com.freelance.category.dtos.SubCategoryResponse;
-import com.freelance.category.entities.Category;
 import com.freelance.category.entities.SubCategory;
-import com.freelance.category.services.SubCategoryRequest;
+import com.freelance.category.dtos.SubCategoryRequest;
 import org.springframework.stereotype.Service;
 
 @Service

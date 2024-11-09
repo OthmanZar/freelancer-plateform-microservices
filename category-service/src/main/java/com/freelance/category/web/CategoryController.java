@@ -26,7 +26,7 @@ public class CategoryController {
         return ResponseEntity.ok("Done");
     }
 
-    @GetMapping("/{categoryName}")
+    @GetMapping("/name/{categoryName}")
     public ResponseEntity<CategoryResponse> findByName(
            @PathVariable String categoryName
     ) throws CategoryException {
@@ -34,7 +34,7 @@ public class CategoryController {
         return ResponseEntity.ok( categoryService.getCategoryByName(categoryName));
     }
 
-    @GetMapping("/{categoryId}")
+    @GetMapping("/id/{categoryId}")
     public ResponseEntity<CategoryResponse> findById(
             @PathVariable Long categoryId
     ) throws CategoryException {
@@ -55,4 +55,7 @@ public class CategoryController {
 
         return ResponseEntity.ok( categoryService.getAllCategoriesWithSubs());
     }
+
+
+
 }

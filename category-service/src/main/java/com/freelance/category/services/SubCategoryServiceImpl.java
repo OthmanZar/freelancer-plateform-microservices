@@ -1,5 +1,6 @@
 package com.freelance.category.services;
 
+import com.freelance.category.dtos.SubCategoryRequest;
 import com.freelance.category.dtos.SubCategoryResponse;
 import com.freelance.category.entities.Category;
 import com.freelance.category.entities.SubCategory;
@@ -14,7 +15,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class SubCategoryImpl implements ISubCategory {
+public class SubCategoryServiceImpl implements ISubCategoryService {
 
     private final SubCategoryRepository subCategoryRepository;
     private final SubCategoryMapper subCategoryMapper;
@@ -22,7 +23,7 @@ public class SubCategoryImpl implements ISubCategory {
 
     @Override
     public void createSubCategory(SubCategoryRequest categoryRequest) throws CategoryException {
-        Category category = categoryRepository.findByCategoryName(categoryRequest.name());
+        Category category = categoryRepository.findByCategoryName(categoryRequest.categoryName());
 
         if(category==null){
             throw new CategoryException("Category Not Found");

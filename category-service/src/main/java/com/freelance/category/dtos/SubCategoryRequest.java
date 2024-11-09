@@ -1,4 +1,4 @@
-package com.freelance.category.services;
+package com.freelance.category.dtos;
 
 public record SubCategoryRequest(
 
