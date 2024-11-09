@@ -3,12 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FreelanceApp.iml" filepath="$PROJECT_DIR$/FreelanceApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/account-service/account-service.iml" filepath="$PROJECT_DIR$/account-service/account-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/category-service/category-service.iml" filepath="$PROJECT_DIR$/category-service/category-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/config-service/config-service.iml" filepath="$PROJECT_DIR$/config-service/config-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/discovery-service/discovery-service.iml" filepath="$PROJECT_DIR$/discovery-service/discovery-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/discovery-service/gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/discovery-service/gateway-service/gateway-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/skills-microservice/skills-microservice.iml" filepath="$PROJECT_DIR$/skills-microservice/skills-microservice.iml" />
     </modules>
   </component>
 </project>
