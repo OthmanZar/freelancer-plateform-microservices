@@ -1,14 +1,15 @@
 spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
   application:
     name: account-service
   datasource:
     url: jdbc:mysql://localhost:3306/account-ms?createDatabaseIfNotExist=true
     username: root
     password:
-  servlet:
-    multipart:
-      max-file-size: 10MB
-      max-request-size: 10MB
+
   jpa:
     hibernate:
       ddl-auto: update

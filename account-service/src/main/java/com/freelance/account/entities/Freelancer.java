@@ -20,6 +20,18 @@ public class Freelancer extends AppUser {
     String cv;
 
 
+    @Override
+    @Transient
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of(
+
+                (GrantedAuthority)()->Authorities.FREELANCER.toString()
+
+        );
+
+    }
+
+
     @ElementCollection
     @CollectionTable(name = "freelancer_subcategories", joinColumns = @JoinColumn(name = "subcategory_id"))
 
@@ -47,14 +59,5 @@ public class Freelancer extends AppUser {
         this.subCategories = subCategories;
     }
 
-    @Override
-    @Transient
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(
 
-                (GrantedAuthority)()->Authorities.FREELANCER.toString()
-
-        );
-
-    }
 }

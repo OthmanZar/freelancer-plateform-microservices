@@ -1,6 +1,7 @@
 package com.freelance.account.mappers;
 
 import com.freelance.account.dto.FreelancerRequest;
+import com.freelance.account.dto.FreelancerResponse;
 import com.freelance.account.entities.AppUser;
 import com.freelance.account.entities.Freelancer;
 import lombok.AllArgsConstructor;
@@ -18,7 +19,8 @@ PasswordEncoder encoder;
     public Freelancer fromRequest(FreelancerRequest request){
 
         Freelancer freelancer=new Freelancer();
-
+        freelancer.setFirstName(request.getFirstName());
+        freelancer.setLastName(request.getLastName());
         freelancer.setEmail(request.getEmail());
 
         freelancer.setBirthDay(request.getBirthDay());
@@ -35,4 +37,24 @@ PasswordEncoder encoder;
 
 
     }
+    public FreelancerResponse fromEntity(Freelancer entity){
+
+        FreelancerResponse  resp=new FreelancerResponse();
+
+        resp.setEmail(entity.getEmail());
+resp.setLastName(entity.getLastName());
+
+resp.setFirstName(entity.getFirstName());
+
+resp.setImagePath(entity.getImage());
+resp.setCv(entity.getCv());
+
+        return resp;
+
+
+
+
+    }
+
+
 }

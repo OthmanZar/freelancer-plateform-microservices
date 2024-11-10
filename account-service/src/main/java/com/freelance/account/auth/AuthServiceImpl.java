@@ -13,6 +13,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class AuthServiceImpl implements  AuthService {
@@ -58,10 +60,12 @@ public class AuthServiceImpl implements  AuthService {
 
 
 
+
     @Override
     public void login(LoginRequest request) {
 
 
 
     }
+
 }
