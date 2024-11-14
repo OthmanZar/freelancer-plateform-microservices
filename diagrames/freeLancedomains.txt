@@ -1,0 +1,28 @@
+domain categories [category,subcategory] sql
+
+domain skills [skills,skillExperience] sql
+
+domain accounts [client,admin,freelancer,reviews] sql
+
+domain chat [message] nosql
+
+domain freelancerAttachements [certification,cv] nosql || sql
+
+domain offers [offer,attachement] sql 
+
+domain payement [payement] nosql
+
+domain notification [notifications] nosql
+
+domain proposal [proposal] sql
+
+domain coins [achatcoins] sql
+
+
+
+
+
+
+
+
+
