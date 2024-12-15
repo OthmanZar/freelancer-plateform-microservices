@@ -11,7 +11,7 @@ import lombok.Data;
 public class SkillRequest{
 
         @NotNull(message = "Freelancer ID must not be null")
-        Long freelancerId;
+        String freelancerId;
 
         @NotBlank(message = "Provide a skill name")
         String skillName;

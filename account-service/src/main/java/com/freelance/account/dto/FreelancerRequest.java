@@ -15,10 +15,10 @@ public class FreelancerRequest extends AbstractRequest {
 
     SkillRequest skillRequest;
 
+
+
     public List<Long> getSubCategories() {
-
         return subCategories;
-
     }
 
     public void setSubCategories(List<Long> subCategories) {
