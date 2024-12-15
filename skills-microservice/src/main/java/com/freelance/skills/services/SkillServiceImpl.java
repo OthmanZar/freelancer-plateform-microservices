@@ -38,7 +38,7 @@ public class SkillServiceImpl implements ISkillService {
     }
 
     @Override
-    public List<String> getSkillsOfFreelancer(Long id) {
+    public List<String> getSkillsOfFreelancer(String id) {
 
         List<SkillExperience> skillExperiences = skillRepository.findSkillExperienceById_Id(id);
 
@@ -51,7 +51,7 @@ public class SkillServiceImpl implements ISkillService {
     }
 
     @Override
-    public List<Long> getFreelancersBySkill(String name) {
+    public List<String> getFreelancersBySkill(String name) {
         List<SkillExperience> skillExperiences = skillRepository.findSkillExperienceById_SkillName(name);
 
         if(skillExperiences.isEmpty()){

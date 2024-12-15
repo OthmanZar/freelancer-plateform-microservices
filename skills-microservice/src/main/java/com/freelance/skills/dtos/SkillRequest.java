@@ -8,7 +8,7 @@ import jakarta.validation.constraints.NotNull;
 public record SkillRequest(
 
         @NotNull(message = "Freelancer ID must not be null")
-        Long freelancerId,
+        String freelancerId,
         @NotBlank(message = "Provide a skill name")
         String skillName,
         @EnumValue(enumClass = ExperienceType.class)

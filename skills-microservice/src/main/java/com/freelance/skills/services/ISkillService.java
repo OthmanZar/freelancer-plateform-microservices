@@ -11,8 +11,8 @@ public interface ISkillService {
 
     Set<String> getAllSkills();
 
-    List<String> getSkillsOfFreelancer(Long id);
+    List<String> getSkillsOfFreelancer(String id);
 
-    List<Long> getFreelancersBySkill(String name);
+    List<String> getFreelancersBySkill(String name);
 
 }

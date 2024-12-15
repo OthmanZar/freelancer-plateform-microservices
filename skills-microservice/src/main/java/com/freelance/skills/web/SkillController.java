@@ -32,13 +32,13 @@ public class SkillController {
 
     @GetMapping("/freelancer/{id}")
     public ResponseEntity<List<String>> getSkillsOfFreelancer(
-            @PathVariable Long id
+            @PathVariable String id
     ){
         return ResponseEntity.ok(skillService.getSkillsOfFreelancer(id));
     }
 
     @GetMapping("/{skill}")
-    public ResponseEntity<List<Long>> getFreelancerBySkills(
+    public ResponseEntity<List<String>> getFreelancerBySkills(
             @PathVariable String skill
     ){
         return ResponseEntity.ok(skillService.getFreelancersBySkill(skill));

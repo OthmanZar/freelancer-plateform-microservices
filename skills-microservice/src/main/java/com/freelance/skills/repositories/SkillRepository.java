@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface SkillRepository extends JpaRepository<SkillExperience, SkillExperienceID> {
 
-    List<SkillExperience> findSkillExperienceById_Id(Long Id);
+    List<SkillExperience> findSkillExperienceById_Id(String Id);
 
     List<SkillExperience> findSkillExperienceById_SkillName(String skillName);
 }

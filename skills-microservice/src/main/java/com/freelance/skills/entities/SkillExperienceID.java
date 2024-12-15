@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Data
 public class SkillExperienceID implements Serializable {
 
-    private Long id;
+    private String id;
 
     private String skillName;
 
