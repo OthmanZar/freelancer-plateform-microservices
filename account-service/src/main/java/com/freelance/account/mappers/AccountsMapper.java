@@ -2,7 +2,6 @@ package com.freelance.account.mappers;
 
 import com.freelance.account.dto.FreelancerRequest;
 import com.freelance.account.dto.FreelancerResponse;
-import com.freelance.account.entities.AppUser;
 import com.freelance.account.entities.Freelancer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,11 +13,11 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class AccountsMapper {
 
-PasswordEncoder encoder;
+    PasswordEncoder encoder;
 
-    public Freelancer fromRequest(FreelancerRequest request){
+    public Freelancer fromRequest(FreelancerRequest request) {
 
-        Freelancer freelancer=new Freelancer();
+        Freelancer freelancer = new Freelancer();
         freelancer.setFirstName(request.getFirstName());
         freelancer.setLastName(request.getLastName());
         freelancer.setEmail(request.getEmail());
@@ -34,24 +33,21 @@ PasswordEncoder encoder;
         return freelancer;
 
 
-
-
     }
-    public FreelancerResponse fromEntity(Freelancer entity){
 
-        FreelancerResponse  resp=new FreelancerResponse();
+    public FreelancerResponse fromEntity(Freelancer entity) {
+
+        FreelancerResponse resp = new FreelancerResponse();
 
         resp.setEmail(entity.getEmail());
-resp.setLastName(entity.getLastName());
+        resp.setLastName(entity.getLastName());
 
-resp.setFirstName(entity.getFirstName());
+        resp.setFirstName(entity.getFirstName());
 
-resp.setImagePath(entity.getImage());
-resp.setCv(entity.getCv());
+        resp.setImagePath(entity.getImage());
+        resp.setCv(entity.getCv());
 
         return resp;
-
-
 
 
     }

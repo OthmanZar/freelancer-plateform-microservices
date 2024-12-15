@@ -20,6 +20,8 @@ public class Freelancer extends AppUser {
     String cv;
 
 
+
+
     @Override
     @Transient
     public Collection<? extends GrantedAuthority> getAuthorities() {

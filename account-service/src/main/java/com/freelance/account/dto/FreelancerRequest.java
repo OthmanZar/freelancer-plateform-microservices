@@ -13,8 +13,12 @@ public class FreelancerRequest extends AbstractRequest {
     @NotNull(message = "yous should provide ids of subcategories")
     List<Long> subCategories; //id of subcategories  [1,2,3,4]
 
+    SkillRequest skillRequest;
+
     public List<Long> getSubCategories() {
+
         return subCategories;
+
     }
 
     public void setSubCategories(List<Long> subCategories) {

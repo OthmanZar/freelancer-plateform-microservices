@@ -1,8 +1,10 @@
 package com.freelance.account.auth;
 
+import com.freelance.account.client.SkillsClient;
 import com.freelance.account.dao.UserRepository;
 import com.freelance.account.dto.FreelancerRequest;
 import com.freelance.account.dto.LoginRequest;
+import com.freelance.account.dto.SkillRequest;
 import com.freelance.account.entities.AppUser;
 import com.freelance.account.entities.Freelancer;
 import com.freelance.account.exception.PasswordConfirmationException;
@@ -20,6 +22,8 @@ import java.util.List;
 public class AuthServiceImpl implements  AuthService {
 
     UserRepository userRepository;
+
+    SkillsClient skillsClient;
 
     AccountsMapper mapper;
 
@@ -49,7 +53,33 @@ public class AuthServiceImpl implements  AuthService {
         freelancer.setCv(cvPath);
         freelancer.setImage(imageName);
 
-        userRepository.save(freelancer);
+
+
+        freelancer=userRepository.save(freelancer);
+
+
+
+        request.getSkillRequest().setFreelancerId(freelancer.getId());
+
+
+        skillsClient.createSkill(request.getSkillRequest());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
