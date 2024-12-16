@@ -3,16 +3,13 @@ package com.freelance.account.entities;
 
 import com.freelance.account.enums.Sex;
 import jakarta.persistence.*;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.annotation.processing.Generated;
 import java.time.LocalDate;
-import java.util.Collection;
 
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public abstract  class AppUser implements UserDetails {
+public abstract class AppUser implements UserDetails {
 
 
     @Id
@@ -23,7 +20,7 @@ public abstract  class AppUser implements UserDetails {
     String lastName;
 
     String password;
-@Column(unique = true)
+    @Column(unique = true)
     String email;
 
     String image;
@@ -31,7 +28,6 @@ public abstract  class AppUser implements UserDetails {
     LocalDate birthDay;
 
     boolean enabled;
-
 
 
     Sex sex;

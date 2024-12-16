@@ -1,12 +1,17 @@
 package com.freelance.account.mappers;
 
+import com.freelance.account.client.SubCategoryClient;
 import com.freelance.account.dto.FreelancerRequest;
 import com.freelance.account.dto.FreelancerResponse;
+import com.freelance.account.dto.SubcategoryResponse;
 import com.freelance.account.entities.Freelancer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 @Data
@@ -14,6 +19,8 @@ import org.springframework.stereotype.Component;
 public class AccountsMapper {
 
     PasswordEncoder encoder;
+
+    SubCategoryClient client;
 
     public Freelancer fromRequest(FreelancerRequest request) {
 
@@ -27,6 +34,8 @@ public class AccountsMapper {
         freelancer.setSex(request.getSex());
 
         freelancer.setPassword(encoder.encode(request.getPassword()));
+
+
 
         freelancer.setEnabled(false);
 
@@ -46,6 +55,12 @@ public class AccountsMapper {
 
         resp.setImagePath(entity.getImage());
         resp.setCv(entity.getCv());
+        List<SubcategoryResponse> subcategoryResponses = entity.getSubCategories()
+
+                .stream().map(client::findSubCategoriesById)
+                .collect(Collectors.toList());
+
+        resp.setSubcategories(subcategoryResponses);
 
         return resp;
 
