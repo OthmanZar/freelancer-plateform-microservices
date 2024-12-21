@@ -1,8 +1,10 @@
-package com.freelance.account.dto;
+package com.freelance.account.dto.request;
 
+import com.freelance.account.enums.Sex;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -15,6 +17,14 @@ public class FreelancerRequest extends AbstractRequest {
 
     SkillRequest skillRequest;
 
+    @NotNull(message = "birthday is mandatory")
+
+    LocalDate birthDay;
+
+
+    @NotNull(message = "sex is mandatory")
+
+    Sex sex;
 
 
     public List<Long> getSubCategories() {
@@ -24,4 +34,5 @@ public class FreelancerRequest extends AbstractRequest {
     public void setSubCategories(List<Long> subCategories) {
         this.subCategories = subCategories;
     }
+
 }

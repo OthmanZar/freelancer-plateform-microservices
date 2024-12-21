@@ -1,4 +1,4 @@
-package com.freelance.account.dto;
+package com.freelance.account.dto.response;
 
 
 import lombok.Data;

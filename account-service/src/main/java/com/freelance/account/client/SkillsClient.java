@@ -1,6 +1,6 @@
 package com.freelance.account.client;
 
-import com.freelance.account.dto.SkillRequest;
+import com.freelance.account.dto.request.SkillRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -20,6 +20,15 @@
         <module name="account" />
         <module name="gateway" />
       </profile>
+      <profile name="Annotation profile for offers-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar" />
+        </processorPath>
+        <module name="offers-service" />
+      </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
@@ -34,6 +43,7 @@
       <module name="discovery-service" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="gateway-service" options="-parameters" />
+      <module name="offers-service" options="-parameters" />
       <module name="skills" options="-parameters" />
       <module name="skills-microservice" options="-parameters" />
     </option>
