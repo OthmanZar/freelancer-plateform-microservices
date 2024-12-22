@@ -47,7 +47,7 @@ public class AuthServiceImpl implements  AuthService {
         Freelancer freelancer=mapper.fromRequest(request);
 
 
-        String imageName= storageService.saveProfileImage(image);
+        String imageName= storageService.saveProfileImageFreelancer(image);
         String cvPath=storageService.saveCvFile(cv);
 
         freelancer.setCv(cvPath);

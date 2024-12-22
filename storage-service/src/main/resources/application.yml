@@ -1,0 +1,20 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  application:
+    name: storage-service
+  config:
+    import: optional:configserver:http://localhost:5000
+
+
+server:
+  port: 5021
+
+folders :
+  freelancers:
+    cvs: "C:\\IOC_CDI\\FreelanceApp\\account-service\\files\\freelanecers\\cvs"
+    profile-images: "C:\\IOC_CDI\\FreelanceApp\\account-service\\files\\freelanecers\\profile_images"
+  clients: "C:\\IOC_CDI\\FreelanceApp\\account-service\\files\\clients\\profile_images"
+  offers: "C:\\IOC_CDI\\FreelanceApp\\account-service\\files\\offers\\attachements"

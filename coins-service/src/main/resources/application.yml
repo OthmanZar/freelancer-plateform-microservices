@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: coins-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/coins-ms?createDatabaseIfNotExist=true
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping: orderConfiramtion:com.freelance.coins.dtos.OrderConfirmation
+  config:
+    import: optional:configserver:http://localhost:5000
+server:
+  port: 5004

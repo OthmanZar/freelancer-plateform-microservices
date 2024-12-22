@@ -10,10 +10,22 @@
         <option value="$PROJECT_DIR$/category-service/pom.xml" />
         <option value="$PROJECT_DIR$/skills-microservice/pom.xml" />
         <option value="$PROJECT_DIR$/account-service/pom.xml" />
+        <option value="$PROJECT_DIR$/offers-service/pom.xml" />
+        <option value="$PROJECT_DIR$/offer-service/pom.xml" />
+        <option value="$PROJECT_DIR$/coins-service/pom.xml" />
+        <option value="$PROJECT_DIR$/payment-service/pom.xml" />
+        <option value="$PROJECT_DIR$/notification-service/pom.xml" />
+        <option value="$PROJECT_DIR$/storage-service/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/offer-service/pom.xml" />
+        <option value="$PROJECT_DIR$/offers-service/pom.xml" />
+      </set>
+    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

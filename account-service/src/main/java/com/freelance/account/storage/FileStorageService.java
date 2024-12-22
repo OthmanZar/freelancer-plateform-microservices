@@ -1,5 +1,8 @@
 package com.freelance.account.storage;
 
+import com.freelance.account.client.StorageClient;
+import com.freelance.account.exception.StorageException;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -13,21 +16,23 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @Service
+@RequiredArgsConstructor
 public class FileStorageService {
 
-    @Value("${folders.cv}")
-    String cvsFolder;
+    private final StorageClient storageClient;
 
 
-    @Value("${folders.profile}")
-    String profileFolder;
+
 
     public String saveCvFile(MultipartFile image) {
-        return saveImage(image, cvsFolder);
+        return storageClient.saveFreelancer_Cv(image).orElseThrow(() -> new StorageException("Could Not Upload The file"));
     }
 
-    public String saveProfileImage(MultipartFile image) {
-        return saveImage(image, profileFolder);
+    public String saveProfileImageFreelancer(MultipartFile image) {
+        return storageClient.saveFreelancer_Profile_Image(image).orElseThrow(() -> new StorageException("Could Not Upload The file"));
+    }
+    public String saveProfileImageClient(MultipartFile image) {
+        return storageClient.saveClient_Profile_Image(image).orElseThrow(() -> new StorageException("Could Not Upload The file"));
     }
 
     private String saveImage(MultipartFile image, String directoryPath) {
