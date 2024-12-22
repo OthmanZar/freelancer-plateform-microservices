@@ -2,15 +2,13 @@ package com.freelance.account.web;
 
 
 import com.freelance.account.auth.AuthService;
-import com.freelance.account.dto.FreelancerRequest;
+import com.freelance.account.dto.request.ClientRequest;
+import com.freelance.account.dto.request.FreelancerRequest;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.nio.channels.MulticastChannel;
 
 @RestController
 @RequestMapping("/api/v1/auth")
@@ -29,10 +27,16 @@ public class AuthController {
         return ResponseEntity.ok("An activation code sent to your email ,please activate your account");
 
 
+    }
 
+    @PostMapping("/register/clients")
+    public ResponseEntity<String> registerClient(@RequestPart("client")@Valid ClientRequest request,
+                                                     @RequestPart("image")MultipartFile image){
 
+        authService.registerClient(request,image);
+
+        return ResponseEntity.ok("An activation code sent to your email ,please activate your account");
 
 
     }
-
 }

@@ -1,6 +1,6 @@
 package com.freelance.account.client;
 
-import com.freelance.account.dto.SubcategoryResponse;
+
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,11 +11,11 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Optional;
 
-@FeignClient(name = "storageClient", url = "http://localhost:5021")
+@FeignClient(name = "storageClient", url = "http://localhost:5021/api/v1/storage")
 public interface StorageClient {
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE,path = "/freelancer/profileImage")
-    Optional<String> saveFreelancer_Profile_Image(@RequestPart("profileImage") MultipartFile profileImage);
+    Optional<String> saveFreelancer_Profile_Image(@RequestPart("profile-image") MultipartFile profileImage);
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE,path = "/freelancer/cv")
     Optional<String> saveFreelancer_Cv(@RequestPart("cv") MultipartFile cv);

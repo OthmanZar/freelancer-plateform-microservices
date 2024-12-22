@@ -1,7 +1,6 @@
 package com.freelance.account.service;
 
-import com.freelance.account.dto.FreelancerRequest;
-import com.freelance.account.dto.FreelancerResponse;
+import com.freelance.account.dto.response.FreelancerResponse;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;

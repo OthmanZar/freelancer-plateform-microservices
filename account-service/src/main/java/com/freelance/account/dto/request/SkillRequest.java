@@ -1,6 +1,7 @@
-package com.freelance.account.dto;
+package com.freelance.account.dto.request;
 
 
+import com.freelance.account.enums.ExperienceType;
 import com.freelance.account.validations.EnumValue;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

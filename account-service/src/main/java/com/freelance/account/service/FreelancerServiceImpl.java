@@ -2,8 +2,7 @@ package com.freelance.account.service;
 
 import com.freelance.account.client.SubCategoryClient;
 import com.freelance.account.dao.FreelancerRepository;
-import com.freelance.account.dto.FreelancerResponse;
-import com.freelance.account.dto.SubcategoryResponse;
+import com.freelance.account.dto.response.FreelancerResponse;
 import com.freelance.account.entities.Freelancer;
 import com.freelance.account.exception.UserNotFoundException;
 import com.freelance.account.mappers.AccountsMapper;

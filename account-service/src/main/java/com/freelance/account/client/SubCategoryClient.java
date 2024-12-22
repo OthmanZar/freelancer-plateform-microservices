@@ -1,7 +1,7 @@
 package com.freelance.account.client;
 
 
-import com.freelance.account.dto.SubcategoryResponse;
+import com.freelance.account.dto.response.SubcategoryResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
