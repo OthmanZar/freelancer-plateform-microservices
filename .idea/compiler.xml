@@ -14,16 +14,6 @@
         <module name="account" />
         <module name="gateway" />
       </profile>
-      <profile name="Annotation profile for coins" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
-        </processorPath>
-        <module name="coins" />
-      </profile>
       <profile name="Annotation profile for storage-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -33,6 +23,8 @@
         </processorPath>
         <module name="notification" />
         <module name="payment" />
+        <module name="storage" />
+        <module name="coins" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

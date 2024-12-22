@@ -1,8 +1,4 @@
 spring:
-  servlet:
-    multipart:
-      max-file-size: 10MB
-      max-request-size: 10MB
   application:
     name: account-service
   datasource:
@@ -19,14 +15,8 @@ spring:
   config:
     import: optional:configserver:http://localhost:5000
 
-
-
-
 server:
   port: 5005
 
-folders :
-  cv: "C:\\IOC_CDI\\FreelanceApp\\account-service\\files\\cvs"
-  profile: "C:\\IOC_CDI\\FreelanceApp\\account-service\\files\\profile_images"
 
 
